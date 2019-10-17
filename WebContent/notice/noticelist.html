@@ -3,15 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <title>공지사항 list</title>
+<link href="../css/reset.css" rel="stylesheet">
+
+<link href="../css/layout.css" rel="stylesheet">
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
 <style type="text/css">
-div {
+.div_t {
 	width: 100%;
-	height: 750px;
-	background-color: rgb(240, 240, 240);
+ 	background-color: rgb(240, 240, 240); 
 }
 
 .t {
-	width: 50%;
+	width: 100%;
 	margin: 0 auto;
 	text-align: center;
 	font-size: 13px;
@@ -21,8 +27,9 @@ div {
 }
 
 .notice {
-	height: 108px;
+	height: 70px;
 	font-size: 30px;
+	background-color: rgb(240, 240, 240);
 }
 
 .black {
@@ -31,8 +38,6 @@ div {
 	background-color : #252525;
 	text-align: center;
 	color: white;
-	background-color: #252525;
-	background-color: #252525;
 }
 
 .b1 {
@@ -62,9 +67,41 @@ div {
 </style>
 </head>
 <body>
-	<h1>공지사항 list</h1>
+<!-- 	<h1>공지사항 list</h1> -->
+<header>
+		<div class="header_wrap">
 
-	<div>
+			<div class="header_logo">
+				<a href="../index.html"><img src="../img/common/logo.png"></a>
+			</div>
+
+			<ul class="header_nav">
+				<li><a href="noticelist.html">NOTICE</a></li>
+				<li><a href="../qna/qnalist.html">QNA</a></li>
+				<li><a href="#">COMPANY</a></li>
+				<li><a href="#">AUDITION</a></li>
+			</ul>
+
+			<ul class="header_subnav">
+				<li><a href="../member/check.html">JOIN</a></li>
+				<li><a href="../member/login.html">LOGIN</a></li>
+			</ul>
+
+
+		</div>
+	</header>
+
+	<section class="main">
+	<aside> 
+	<ul>
+	<li><i class='fas fa-angle-double-left' style='font-size:25px'></i></li>
+	<li><i class='fas fa-angle-double-right' style='font-size:25px'></i></li>
+	<li><i class='fas fa-apple-alt' style='font-size:25px'></i></li>
+	<li><i class='fas fa-shopping-cart' style='font-size:25px'></i></li>
+	</ul>
+	</aside>
+	
+	<div class="div_t">
 		<table class="t">
 			<tr class="notice">
 				<td colspan="5">NOTICE</td>
@@ -153,8 +190,41 @@ div {
 
 		</table>
 	</div>
+	
+	</section>
 
-	<ul>
+	<footer>
+		<div class="footer_wrap">
+			<div class="footer_logo">
+				<img src="../img/common/ft_logo.png">
+			</div>
+
+			<ul class="footer_nav">
+				<li><a href="#">개인정보취급방침 | </a></li>
+				<li><a href="#">이용약관 | </a></li>
+				<li><a href="#">고객센터/문의하기 (Customer Service)</a></li>
+			</ul>
+
+			<div class="footer_select">
+				<select>
+					<option>FNC KINGDOM SITE</option>
+					<option>FNC STORE</option>
+					<option>FNC FACEBOOK</option>
+					<option selected="selected">FNC KINGDOM</option>
+				</select>
+			</div>
+
+			<div class="footer_text">
+				<p class="p1">서울시 강남구 청담동 111 (주) FNC ENTERTAINMENT | TEL. 02)
+					517-5426 | FAX. 02) 518-5428</p>
+				<p class="p2">COPYRIGHT © 2014 FNCENT.COM ALL RIGHT RESERVED</p>
+			</div>
+
+		</div>
+	</footer>
+
+
+<!-- 	<ul>
 		<li><a href="noticeone.html"> 글 하나보기 </a></li>
 		<li><a href="noticewrite.html"> 글 작성하기 </a></li>
 	</ul>
@@ -162,7 +232,7 @@ div {
 	<hr>
 	<p>
 		<a href="../index.html"> 메인화면으로 돌아가기</a>
-	</p>
+	</p> -->
 
 </body>
 </html>
