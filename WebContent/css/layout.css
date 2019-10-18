@@ -7,8 +7,8 @@ header {
 	height: 67px;
 	background-image: url("../img/common/header_bg.png");
 	background-repeat: repeat-x;
-/* 	position: absolute;
-	top: 0;  */
+	position: fixed;
+	top: 0;
 }
 
 .header_wrap {
@@ -25,13 +25,13 @@ header {
 .header_logo {
 	/* position: absolute;
 	top:13px; */
-	padding-top: 13px; 
+	padding-top: 13px;
 	float: left;
 }
 
 .header_nav {
 	float: left;
-/* 	position: absolute;
+	/* 	position: absolute;
 		left: 750px; */
 	margin-left: 220px;
 }
@@ -39,15 +39,15 @@ header {
 .header_nav li {
 	float: left;
 	line-height: 67px;
-	margin-right: 15px; 
+	margin-right: 15px;
 	font-weight: bold;
 	font-size: 13px;
 }
 
 .header_subnav {
- 	padding-top: 26px;
+	padding-top: 26px;
 	float: right;
-/* 	position: absolute;
+	/* 	position: absolute;
 top: 26px;
 right:300px; */
 }
@@ -82,15 +82,20 @@ right:300px; */
 .main {
 	clear: both;
 	width: 47.9166%;
-	height: 650px; 
-	/* background-color: orange; */
+	min-height: 900px;
+	/* 	
+ 	최소높이만 지정한다.
+	페이지마다 높이가 상대적이다.
+	min-width: ;
+	최소 너비 지정
+	max-height:; 최대 길이 지정
+	max-width:; 최대 너비 지정
+	*/
 	margin: 0 auto;
-	/* position: absolute;
-	top:80px; */
 	margin-top: 80px;
 }
 
-aside{
+aside {
 	background-color: black;
 	color: white;
 	position: fixed;
@@ -98,55 +103,102 @@ aside{
 	right: 0;
 	padding: 3px;
 	text-align: center;
-	width: 38px;s
+	width: 38px;
+	s
 }
 
-aside li{
+aside li {
 	padding: 5px;
-	
 }
 
-body{
+body {
 	background-color: rgb(240, 240, 240);
-	
 }
-
 
 /* footer */
 footer {
-	color: #a9a9a9;
 	width: 100%;
 	height: 132px;
-	/* position: absolute;
-	bottom: 0; */
 	margin-top: 52px;
 	background-image: url("../img/common/header_bg.gif");
+	overflow: hidden;
+	/* margin top을 쓸 때 버그로 큰 값따라가므로 그 설정을 없앤다. */
 }
 
 .footer_wrap {
 	width: 47.9166%;
 	height: 132px;
-	margin: 0 auto;
+	margin: 0 auto; /* 수평정렬 */
 	overflow: hidden;
-	/* position: absolute;
-	top: 15px;
-	left:  47.9166%; */
+	/* 	padding-top: 40px;
+	위에서부터 내린다.
+	box-sizing: border-box; */
+	margin-top: 20px;
+}
+/*  */
+.footer_logo {
+	float: left;
 }
 
-.footer_logo {
-	padding-top: 20px;
-	/*  position: absolute;
-	 top: 15px; */
+.footer_info {
 	float: left;
+	width: 60%;
+	height: 100%;
+	margin-left: 3.0726%;
+	/* 20픽셀을 퍼센트로 준다. 
+	픽셀은 그 크기를 유지하려고 하지만
+	퍼센트는 그 비율만을 유지하려고 한다.  
+	따라서 픽셀보다는 퍼센트로 지정하는 것이 좋다.*/
+}
+
+.footer_link {
+	float: right;
+	width: 20%;
+	height: 100%;
+}
+
+.footer_info_sub1 {
+	font-size: 0.7em;
+	/* 	em : 배율  / rem : 전체에서의 배율
+	폰트도 픽셀보다 배율로 하는게 내가 보는 화면사이즈에 맞게 설정된다. */
+	color: #a9a9a9;
+}
+
+.footer_info_sub2 {
+	font-size: 0.7em;
+	color: #a9a9a9;
+	padding-top: 5px;
+}
+
+.footer_info_sub2>span {
+	font-size: 0.5em;
+	color: #717171;
+}
+
+.footer_link {
+	text-align: right;
+}
+
+.footer_link select {
+	width: 100%;
+	border: 0; background-color : #4a4a4a;
+	color: #a9a9a9;
+	background-color: #4a4a4a;
+	/* 셀렉트 태그에 값을 주려면 직접 select를 지정해서 색을 지정해 주어야 한다. */
+}
+
+/*  */
+/* .footer_logo {
+	float: left;
+	padding-top: 20px;
 }
 
 .footer_nav {
 	float: left;
 	padding-top: 20px;
-	/* position: absolute;
-	top: 15px; */
 	margin-left: 25px;
 	padding-bottom: 5px;
+	overflow: hidden;
 }
 
 .footer_nav li {
@@ -194,7 +246,4 @@ footer {
 	width: 130px;
 	height: 23px;
 
-}
-
-
-
+} */
